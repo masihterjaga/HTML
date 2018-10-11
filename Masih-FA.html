@@ -487,15 +487,9 @@ body{font-family:'Open Sans',sans-serif;background:#fff}*{-moz-box-sizing:border
 <li><i class="fa fa-meanpath"></i> <span class="icon-name"></span>                <span class="icon-value">"\f20c"</span></li>
 </ul>
 </div>
-<div id="credit">
-</div>
-<script>
-var date=new Date();var year=date.getFullYear();document.getElementById('site-year')['innerHTML']=year
-var t = document.getElementById("credit").textContent;
-var y = document.createTextNode("&#169; <span id='site-year'/> <a class="creditlink" href="https://masihterjaga.blogspot.com" title="Masih Terjaga"><span>MASIHTERJAGA</span></a>
-");
+<a href="https://masihterjaga.blogspot.com/" title="Masih Terjaga" rel="external">MASIHTERJAGA</a>
 
-t.appendChild(y);
-  $(function(){var iconList=$('#masihterjaga-fa li'),iconListI=iconList.find('i');iconList.each(function(i){var target=$(this),targetClass=target.find('i').attr('class'),targetClass=targetClass.replace('fa ',''),targetLabel=target.find('span.icon-name');targetLabel.text(targetClass)})})
+<script>
+$(function(){var iconList=$('#masihterjaga-fa li'),iconListI=iconList.find('i');iconList.each(function(i){var target=$(this),targetClass=target.find('i').attr('class'),targetClass=targetClass.replace('fa ',''),targetLabel=target.find('span.icon-name');targetLabel.text(targetClass)})})
 </script>
 
