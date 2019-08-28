@@ -17,6 +17,10 @@ box-sizing: inherit;
 -ms-flex-wrap: wrap;
 flex-wrap: wrap;
 }  
+.rel_wrap::after {
+content: '';
+flex: auto;
+}  
 .clear::after {
   content: "";
   display: table;
