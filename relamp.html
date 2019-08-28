@@ -2,7 +2,12 @@
 <!DOCTYPE html><html dir='ltr' lang='id-ID'><head>
   <meta charset='UTF-8'>
 <meta content='width=device-width' name='viewport'>
-  <title>Related Post</title><style>
+  <title>Related Post</title>
+<style>
+*, *::before, *::after {
+-webkit-box-sizing: inherit;
+box-sizing: inherit;
+}
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13,9 +18,7 @@
   display: table;
   clear: both;
 }
-.related-post {
-padding: 0 20px;
-}
+
 .rel_wrap {
 -ms-flex-wrap: wrap;
 flex-wrap: wrap;
