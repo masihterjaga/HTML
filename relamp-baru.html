@@ -28,14 +28,7 @@
       a:hover {
       color: #198CFF
       }
-      .clear {
-      clear: both;
-      }
-      .clear::after {
-      content: "";
-      display: table;
-      clear: both;
-      }
+    
       .trans,a {
       -webkit-transition: all 0.3s ease-in-out;
       -o-transition: all 0.3s ease-in-out;
@@ -97,7 +90,7 @@
   .rel_post:nth-child(even) {
     padding-left: 5px;
    }
-@media only screen and (maz-width:600px) {
+@media only screen and (max-width:600px) {
   .rel-post {
     width: 100%
    }
@@ -105,7 +98,7 @@
     </style>
   </head>
   <body>
-    <section class='clear flex rel_wrap'>
+    <section class='flex'>
       <script>function getQueryVariable(r) {
         for (var l = window.location.search.substring(1).split("&"), e = 0; e < l.length; e++) {
           var t = l[e].split("=");
