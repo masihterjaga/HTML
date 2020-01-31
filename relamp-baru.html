@@ -42,6 +42,9 @@
       img {
       max-width: 100%;
       height: auto;
+      margin: 0;
+      border: none;
+      vertical-align: middle;
       }
       .rel_wrap {
       -ms-flex-wrap: wrap;
@@ -91,7 +94,7 @@
         return e = e.join(""), e = e.substring(0, l - 1)
         }
         var simg = getQueryVariable("si"),
-        rsimg = (simg == false) ? "/w1280-h720-p-k-no-nu/" : "/" + simg + "/";
+        rsimg = (simg == false) ? "/w768-h432-p-k-no-nu/" : "/" + simg + "/";
         
         function relpostimgcuplik(r) {
         for (var l = 0; l < r.feed.entry.length; l++) {
