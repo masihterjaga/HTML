@@ -37,10 +37,10 @@
       }
       .flex {
       display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+display: -ms-flexbox;
+display: flex;
+-ms-flex-wrap: wrap;
+flex-wrap: wrap;
       }
       img {
       max-width: 100%;
@@ -50,7 +50,7 @@
       vertical-align: middle;
       }
 
-      .rel_post,.rel_thumb {
+      .rel_thumb {
       overflow: hidden;
       }
       .rel_post .fitthis {
@@ -82,12 +82,7 @@
   .rel_post {
    flex-basis: 50%;
   }
-  .rel_post:nth-child(odd) {
-    padding-right: 5px;
-  }
-  .rel_post:nth-child(even) {
-    padding-left: 5px;
-   }
+  
 @media only screen and (max-width:600px) {
   .rel-post {
     flex-basis: 100%
