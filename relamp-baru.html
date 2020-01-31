@@ -71,6 +71,7 @@
     clear: both;
     padding: 10px;
     max-height: 110px;
+    overflow:hidden;
   }
   rel_body {
 margin: 0;
@@ -86,6 +87,9 @@ line-height: normal;
     width: -moz-calc(100% - 100px);
     width: calc(100% - 100px);
     height: 100%
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
   }
   .rel_title {
     margin: 0;
@@ -122,4 +126,4 @@ function getQueryVariable(r){for(var l=window.location.search.substring(1).split
     </main>
   </body>
 </html>
-<!-- Mankoin -->
+<-- ... -->
