@@ -49,10 +49,7 @@
       border: none;
       vertical-align: middle;
       }
-      .rel_wrap {
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-      }
+
       .rel_post,.rel_thumb {
       overflow: hidden;
       }
@@ -83,7 +80,7 @@
 
 
   .rel_post {
-   width: 50%;
+   flex-basis: 50%;
   }
   .rel_post:nth-child(odd) {
     padding-right: 5px;
@@ -93,7 +90,7 @@
    }
 @media only screen and (max-width:600px) {
   .rel-post {
-    width: 100%
+    flex-basis: 100%
    }
 }
     </style>
