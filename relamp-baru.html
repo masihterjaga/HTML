@@ -72,7 +72,7 @@
     padding: 10px;
     max-height: 110px;
   }
-  .rel_title, .rel_body {
+  rel_body {
 margin: 0;
 line-height: normal;
     overflow: hidden;
@@ -84,15 +84,16 @@ line-height: normal;
     float: right;
     width: -webkit-calc(100% - 100px);
     width: -moz-calc(100% - 100px);
-    width: calc(100% - 100px)
+    width: calc(100% - 100px);
+    height: 100%
   }
-  .rel_a {
+  .rel_title {
     overflow: hidden;
     -o-text-overflow: ellipsis;
        text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2; 
+    -webkit-line-clamp: 3; 
     font-size: 105%;
     font-weight: 600
   }
