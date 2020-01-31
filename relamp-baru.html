@@ -86,10 +86,10 @@
       font-size: 19px;
       color: rgb(18,20,23);
       }
-@media only screen and (min-width:601px) {
+
 
   .rel_post {
-   .max-width: 50%;
+   width: 50%;
   }
   .rel_post:nth-child(odd) {
     padding-right: 5px;
@@ -97,7 +97,11 @@
   .rel_post:nth-child(even) {
     padding-left: 5px;
    }
-}      
+@media only screen and (min-width:601px) {
+  .rel-post {
+    width: 100%
+   }
+}
     </style>
   </head>
   <body>
