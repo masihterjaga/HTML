@@ -5,13 +5,20 @@
     <meta content='width=device-width' name='viewport'>
     <title>Related Post</title>
     <style>
+    @font-face {
+    font-family: 'mt';
+    src: url('https://cdn.statically.io/gh/masihterjaga/fonts/4cd2cc0f/font.woff2')format('woff2'), url('https://cdn.statically.io/gh/masihterjaga/fonts/4cd2cc0f/font.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap
+    }      
       *, *::before, *::after {
       -webkit-box-sizing: inherit;
       box-sizing: inherit;
       margin: 0;
       }
       html {
-      font-family: Roboto, sans-serif;
+      font-family: mt, sans-serif;
       -webkit-tap-highlight-color: transparent;
       } 
       a {
@@ -38,6 +45,8 @@
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
       }
       img {
       max-width: 100%;
