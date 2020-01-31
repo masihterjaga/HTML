@@ -17,7 +17,7 @@
       box-sizing: inherit;
       margin: 0;
       }
-      .clear { clear: both}
+      
       html {
       font-family: mt, sans-serif;
       -webkit-tap-highlight-color: transparent;
@@ -36,12 +36,24 @@
       transition: all 0.3s ease-in-out;
       }
       .flex {
-      display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.rel_wrap {
 -ms-flex-wrap: wrap;
-flex-wrap: wrap;justify-content:space-between;
-      }
+flex-wrap: wrap;
+}  
+.rel_wrap::after {
+content: '';
+flex: auto;
+}  
+.clear::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+      
       img {
       max-width: 100%;
       height: auto;
@@ -99,7 +111,7 @@ margin-left: 3%
 }</style>
   </head>
   <body>
-    <section class='flex'>
+    <section class='rel_wrap flex'>
       <script>function getQueryVariable(r) {
         for (var l = window.location.search.substring(1).split("&"), e = 0; e < l.length; e++) {
           var t = l[e].split("=");
