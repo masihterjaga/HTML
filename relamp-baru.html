@@ -69,7 +69,13 @@ margin: 0;
     vertical-align: middle
   }
   h2,p {
-margin: 0!important
+    margin: 0!important;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; 
   }
   .rel_post {
     clear: both;
@@ -78,12 +84,7 @@ margin: 0!important
     overflow:hidden;
   }
   rel_body {
-margin: 0important;
 line-height: normal;
-    overflow: hidden;
-    white-space: nowrap;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
   }
   .rel_item {
     float: right;
@@ -91,19 +92,9 @@ line-height: normal;
     width: -moz-calc(100% - 100px);
     width: calc(100% - 100px);
     height: 100%
-    overflow: hidden;
-    -o-text-overflow: ellipsis;
-       text-overflow: ellipsis;
   }
   .rel_title {
-    margin: 0;
-    overflow: hidden;
-    -o-text-overflow: ellipsis;
-       text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2; 
-    font-size: 105%;
+    font-size: 110%;
     font-weight: 600
   }
   .rel_body {
@@ -130,5 +121,4 @@ function getQueryVariable(r){for(var l=window.location.search.substring(1).split
     </main>
   </body>
 </html>
-    
  <!-- MasihTerjaga -->   
