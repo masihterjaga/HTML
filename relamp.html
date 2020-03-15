@@ -1,0 +1,90 @@
+<!--Artikel terkait oleh https://www.mankoin.blog-->
+<!DOCTYPE html><html dir='ltr' lang='id-ID'><head>
+  <meta charset='UTF-8'>
+<meta content='width=device-width' name='viewport'>
+  <title>Related Post</title>
+<style>
+*, *::before, *::after {
+-webkit-box-sizing: inherit;
+box-sizing: inherit;
+margin: 0;
+}
+html {
+font-family: Roboto, sans-serif;
+-webkit-tap-highlight-color: transparent;
+}  
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.rel_wrap {
+-ms-flex-wrap: wrap;
+flex-wrap: wrap;
+}  
+.rel_wrap::after {
+content: '';
+flex: auto;
+}  
+.clear::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.rel_post {
+margin: 0 0 15px;
+overflow: hidden;
+border: #fff solid 1px;
+-webkit-box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.3), 0 1px 0 0 rgba(0, 0, 0, 0.05);
+box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.3), 0 1px 0 0 rgba(0, 0, 0, 0.05);
+border-radius: 8px;
+}
+.rel_thumb {
+margin: 0;
+}
+.rel_thumb img {
+max-width: 100%;
+height: auto;
+}
+.rel_tit {
+margin: 5px 10px 10px;
+}
+.rel_link {
+font-family: Roboto, sans-serif;
+text-decoration: none;
+font-size: 19px;
+color: rgb(0,0,0);
+}
+.rel_link:hover {
+color: #198CFF;
+}
+
+.rel_link::after {
+content: "\27F6";
+margin-left: 0;
+opacity: 0;
+vertical-align: middle;
+-webkit-transition: all 0.3s ease-in-out;
+-o-transition: all 0.3s ease-in-out;
+transition: all 0.3s ease-in-out;
+}
+.rel_link:hover::after {
+opacity: 1;
+margin-left: 10px;
+}
+@media only screen and (min-width:601px){
+.rel_wrap {
+flex-direction: row;
+justify-content: space-between;
+
+}
+.rel_post {
+width: 48%;
+}
+.rel_post:last-child {
+
+margin-left: 3%
+}
+
+}</style></head><body><section class='clear flex rel_wrap'><script>function getQueryVariable(r){for(var l=window.location.search.substring(1).split("&"),e=0;e<l.length;e++){var t=l[e].split("=");if(t[0]==r)return t[1]}return!1}function saringtags(r,l){for(var e=r.split("<"),t=0;t<e.length;t++)-1!=e[t].indexOf(">")&&(e[t]=e[t].substring(e[t].indexOf(">")+1,e[t].length));return e=e.join(""),e=e.substring(0,l-1)}var simg=getQueryVariable("si"),rsimg=(simg==false)?"/w1280-h720-p-k-no-nu/":"/"+simg+"/";function relpostimgcuplik(r){for(var l=0;l<r.feed.entry.length;l++){var e=r.feed.entry[l];reljudul[relnojudul]=e.title.$t,postcontent="","content"in e?postcontent=e.content.$t:"summary"in e&&(postcontent=e.summary.$t),relcuplikan[relnojudul]=saringtags(postcontent,numchars),postimg="media$thumbnail"in e?e.media$thumbnail.url.replace(/.*?:\/\//g,"//cdn.statically.io/img/").replace(/\/s[0-9]+(\-c)?\//,rsimg):"https://1.bp.blogspot.com/-prJZ_SiQGng/XT9jNQtx4BI/AAAAAAAADVk/fKXVX4XcjFYPY8ciUsGPB-R3DZITVQMEgCLcBGAs/s1600/no-thumb.jpg",relgambar[relnojudul]=postimg;for(var t=0;t<e.link.length;t++)if("alternate"==e.link[t].rel){relurls[relnojudul]=e.link[t].href;break}relnojudul++}}function contains(r,l){for(var e=0;e<r.length;e++)if(r[e]==l)return!0;return!1}function artikelterkait(){for(var r=new Array(0),l=new Array(0),e=new Array(0),t=new Array(0),a=0;a<relurls.length;a++)contains(r,relurls[a])||(r.length+=1,r[r.length-1]=relurls[a],l.length+=1,l[l.length-1]=reljudul[a],e.length+=1,e[e.length-1]=relcuplikan[a],t.length+=1,t[t.length-1]=relgambar[a]);for(reljudul=l,relurls=r,relcuplikan=e,relgambar=t,a=0;a<reljudul.length;a++){var n=Math.floor((reljudul.length-1)*Math.random()),u=reljudul[a],i=relurls[a],s=relcuplikan[a],o=relgambar[a];reljudul[a]=reljudul[n],relurls[a]=relurls[n],relcuplikan[a]=relcuplikan[n],relgambar[a]=relgambar[n],reljudul[n]=u,relurls[n]=i,relcuplikan[n]=s,relgambar[n]=o}for(var g,c=0,p=Math.floor((reljudul.length-1)*Math.random()),m=p,d=getQueryVariable("pos");c<relmaxtampil&&(relurls[p]==d||(g="<article class='rel_post'>",g+="<figure class='rel_thumb'><a href='"+relurls[p]+"' rel='nofollow' target='_blank' title='"+reljudul[p]+"'><img src='"+relgambar[p]+"' /></a></figure>",g+="<h2 class='rel_tit'><a class='rel_link' href='"+relurls[p]+"' target='_blank'>"+reljudul[p]+"</a></h2>",g+="</article>",document.write(g),++c!=relmaxtampil))&&(p<reljudul.length-1?p++:p=0,p!=m););}for(var labels=getQueryVariable("labels"),relmaxtampil=getQueryVariable("num"),url=getQueryVariable("hp"),res=labels.split(","),i=0,text="";res[i];)text+='<script src="'+url+"/feeds/posts/default/-/"+res[i]+'?alt=json&amp;callback=relpostimgcuplik&amp;max-results=50"><\/script>',i++;var relnojudul=0,numchars=120,reljudul=new Array,relurls=new Array,relcuplikan=new Array,relgambar=new Array;document.write(text+'<script>artikelterkait();<\/script>');</script></section></body></html>
